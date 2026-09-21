@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Pantone Certified Palette */
+    --pantone-classic-blue: #0F4C81;
+    --pantone-ultramarine: #0B3B66;
+    --pantone-living-coral: #FF6F61;
+    --pantone-coral-hover: #FA5252;
+    --pantone-cloud-dancer: #F6F8FB;
+    --pantone-anthracite: #0F172A;
+    --pantone-slate: #526071;
+
+    /* Pantone Status & Risk Tokens */
+    --pantone-emerald: #00875A;
+    --pantone-emerald-light: #E6F7F1;
+    --pantone-emerald-border: #99E3D0;
+    --pantone-emerald-text: #006644;
+
+    --pantone-mimosa: #B76E00;
+    --pantone-mimosa-light: #FFF8E6;
+    --pantone-mimosa-border: #FDE68A;
+    --pantone-mimosa-text: #874700;
+
+    --pantone-chrysanthemum: #D0272B;
+    --pantone-chrysanthemum-light: #FDF0F0;
+    --pantone-chrysanthemum-border: #FECACA;
+    --pantone-chrysanthemum-text: #B01E22;
+
+    --pantone-ultra-violet: #5F4B8B;
+    --pantone-ultra-violet-light: #F5F3FA;
+    --pantone-ultra-violet-border: #DDD6FE;
+    --pantone-ultra-violet-text: #483473;
+
+    /* Application Tokens */
+    --bg-canvas: #F6F8FB;
+    --card-bg: #FFFFFF;
+    --sidebar-bg: #FFFFFF;
+    --primary: #0F4C81;
+    --primary-hover: #0B3B66;
+  }
+
+  body {
+    background-color: #F6F8FB;
+    color: #0F172A;
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Smooth Modern High-Contrast Surfaces */
+.smooth-card,
+.neu-card {
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03), 0 6px 18px -4px rgba(15, 76, 129, 0.06);
+  border: 1px solid rgba(15, 76, 129, 0.08);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.smooth-card-interactive,
+.neu-card-interactive {
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.smooth-card-interactive:hover,
+.neu-card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -6px rgba(15, 76, 129, 0.11), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 76, 129, 0.16);
+}
+
+.smooth-inset,
+.neu-inset {
+  background-color: #F8FAFC;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 76, 129, 0.08);
+}
+
+.smooth-input,
+.neu-input {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #D8DEE9;
+  color: #0F172A;
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.smooth-input:focus,
+.neu-input:focus {
+  background-color: #FFFFFF;
+  border-color: #0F4C81;
+  box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.18);
+  outline: none;
+}
+
+/* Smooth Buttons — Pantone Classic Blue & Living Coral */
+.smooth-btn-primary,
+.neu-btn-primary {
+  background-color: #0F4C81;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 76, 129, 0.25);
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.smooth-btn-primary:hover,
+.neu-btn-primary:hover {
+  background-color: #0B3B66;
+  box-shadow: 0 4px 14px rgba(15, 76, 129, 0.35);
+  transform: translateY(-1px);
+}
+.smooth-btn-primary:active,
+.neu-btn-primary:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.smooth-btn-coral {
+  background-color: #FF6F61;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(255, 111, 97, 0.32);
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.smooth-btn-coral:hover {
+  background-color: #FA5252;
+  box-shadow: 0 4px 16px rgba(255, 111, 97, 0.42);
+  transform: translateY(-1px);
+}
+.smooth-btn-coral:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.smooth-btn-secondary,
+.neu-btn-secondary {
+  background-color: #FFFFFF;
+  color: #1E293B;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 1px solid #D8DEE9;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.smooth-btn-secondary:hover,
+.neu-btn-secondary:hover {
+  background-color: #F8FAFC;
+  color: #0F172A;
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+}
+.smooth-btn-secondary:active,
+.neu-btn-secondary:active {
+  transform: translateY(1px);
+}
+
+/* AI Intelligence Block Button (Pantone Ultra Violet) */
+.smooth-btn-ai,
+.neu-btn-ai {
+  background: linear-gradient(135deg, #5F4B8B 0%, #4A3870 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(95, 75, 139, 0.28);
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.smooth-btn-ai:hover,
+.neu-btn-ai:hover {
+  box-shadow: 0 6px 18px rgba(95, 75, 139, 0.40);
+  transform: translateY(-1px);
+}
+.smooth-btn-ai:active,
+.neu-btn-ai:active {
+  transform: translateY(1px);
+}
+
+/* Active Nav Pill */
+.smooth-nav-active,
+.neu-nav-active {
+  background-color: #EAF1F8;
+  color: #0F4C81;
+  font-weight: 700;
+  border-radius: 12px;
+}
+
+/* High-Contrast LED Jewel Indicators */
+.smooth-jewel-emerald,
+.neu-jewel-green {
+  background-color: #00875A;
+  box-shadow: 0 0 6px rgba(0, 135, 90, 0.6);
+}
+.smooth-jewel-mimosa,
+.neu-jewel-amber {
+  background-color: #D97706;
+  box-shadow: 0 0 6px rgba(217, 119, 6, 0.6);
+}
+.smooth-jewel-chrysanthemum,
+.neu-jewel-red {
+  background-color: #D0272B;
+  box-shadow: 0 0 6px rgba(208, 39, 43, 0.6);
+}
+.smooth-jewel-violet,
+.neu-jewel-purple {
+  background-color: #5F4B8B;
+  box-shadow: 0 0 6px rgba(95, 75, 139, 0.6);
+}
+.smooth-jewel-coral {
+  background-color: #FF6F61;
+  box-shadow: 0 0 6px rgba(255, 111, 97, 0.6);
+}
+
+/* WCAG High-Contrast Badges */
+.smooth-badge-low,
+.neu-badge-low {
+  background-color: #E6F7F1;
+  color: #006644;
+  border: 1px solid #99E3D0;
+  font-weight: 600;
+}
+.smooth-badge-med,
+.neu-badge-med {
+  background-color: #FFF8E6;
+  color: #874700;
+  border: 1px solid #FDE68A;
+  font-weight: 600;
+}
+.smooth-badge-high,
+.neu-badge-high {
+  background-color: #FDF0F0;
+  color: #B01E22;
+  border: 1px solid #FECACA;
+  font-weight: 700;
+}
+.smooth-badge-ai {
+  background-color: #F5F3FA;
+  color: #483473;
+  border: 1px solid #DDD6FE;
+  font-weight: 600;
+}
+
+/* Sleek Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F4F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
